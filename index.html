@@ -19,6 +19,7 @@
     <link rel="canonical" href="https://poksod.com/" />
     <link rel="alternate" hreflang="th-TH" href="https://poksod.com/" />
     <link rel="alternate" hreflang="x-default" href="https://poksod.com/" />
+    <link rel="preload" as="image" href="/poksod-hero-cards.webp" type="image/webp" fetchpriority="high" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -45,6 +46,7 @@
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="//line.me" />
     
     <!-- Theme Color -->
     <meta name="theme-color" content="#000000" />
@@ -99,7 +101,7 @@
     <link rel="modulepreload" href="assets/vendor-ui-BnQUpiKw.js">
     <link rel="stylesheet" href="assets/index-2hnlbQ2C.css">
     <style>
-      img[src*="poksod-hero-cards2"] {
+      img[src*="poksod-hero-cards"] {
         opacity: 0.5 !important;
       }
     </style>
@@ -118,5 +120,49 @@
       </main>
     </noscript>
     <div id="root"></div>
+    <script>
+      (function () {
+        function patchA11y() {
+          var mainSection = document.querySelector("section#content");
+          if (mainSection && !mainSection.hasAttribute("role")) {
+            mainSection.setAttribute("role", "main");
+          }
+
+          document.querySelectorAll("a, button").forEach(function (el) {
+            if (el.getAttribute("aria-label")) return;
+            var text = (el.textContent || "").trim().replace(/\s+/g, " ");
+            if (text.length > 0) return;
+            var href = (el.getAttribute("href") || "").toLowerCase();
+            if (href.indexOf("line.me") !== -1) {
+              el.setAttribute("aria-label", "เพิ่มเพื่อน LINE");
+              return;
+            }
+            if (el.closest("nav")) {
+              el.setAttribute("aria-label", "เมนูนำทาง");
+              return;
+            }
+            el.setAttribute("aria-label", "ปุ่มใช้งาน");
+          });
+
+          document.querySelectorAll("img:not([alt])").forEach(function (img) {
+            img.setAttribute("alt", "ภาพประกอบเว็บไซต์ POKSOD");
+          });
+        }
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", patchA11y, { once: true });
+        } else {
+          patchA11y();
+        }
+
+        var observer = new MutationObserver(function () {
+          patchA11y();
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+        setTimeout(function () {
+          observer.disconnect();
+        }, 8000);
+      })();
+    </script>
   </body>
 </html>
