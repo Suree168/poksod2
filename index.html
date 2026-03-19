@@ -44,8 +44,6 @@
     <link rel="apple-touch-icon" href="poksod-logo.webp" />
     
     <!-- Preconnect for Performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="//line.me" />
     
     <!-- Theme Color -->
@@ -104,6 +102,14 @@
       img[src*="poksod-hero-cards"] {
         opacity: 0.5 !important;
       }
+
+      footer .text-gray-500 {
+        color: #d1d5db !important;
+      }
+
+      footer .text-gray-600 {
+        color: #9ca3af !important;
+      }
     </style>
   </head>
   <body>
@@ -126,6 +132,16 @@
           var mainSection = document.querySelector("section#content");
           if (mainSection && !mainSection.hasAttribute("role")) {
             mainSection.setAttribute("role", "main");
+          }
+
+          var footer = document.querySelector("footer");
+          if (footer) {
+            footer.querySelectorAll("h4").forEach(function (h4) {
+              var h3 = document.createElement("h3");
+              h3.className = h4.className;
+              h3.innerHTML = h4.innerHTML;
+              h4.replaceWith(h3);
+            });
           }
 
           document.querySelectorAll("a, button").forEach(function (el) {
