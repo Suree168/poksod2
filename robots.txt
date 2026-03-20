@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://poksod.com/sitemap.xml
+Sitemap: https://www.poksod.com/sitemap.xml
