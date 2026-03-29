@@ -1,5 +1,5 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-import heroCasino from "@/assets/hero-casino.jpg";
+import heroCasino from "@/assets/pokdeng-online-casino-table.jpg";
 
 const HeroSection = () => {
   const ref = useScrollReveal();
@@ -9,7 +9,7 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroCasino}
-          alt="เว็บป๊อกเด้ง 2 ใบ ออนไลน์"
+          alt="โต๊ะป๊อกเด้งออนไลน์ เว็บป๊อกเด้ง 2 ใบ อันดับ 1 ของไทย POKSOD"
           className="w-full h-full object-cover"
           loading="eager"
         />

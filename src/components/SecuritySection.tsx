@@ -1,5 +1,5 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-import securityShield from "@/assets/security-shield.jpg";
+import securityShield from "@/assets/pokdeng-security-ssl-shield.jpg";
 
 const SecuritySection = () => {
   const ref = useScrollReveal();
@@ -32,7 +32,7 @@ const SecuritySection = () => {
           <div className="scroll-reveal hidden lg:block" style={{ transitionDelay: "200ms" }}>
             <img
               src={securityShield}
-              alt="เว็บป๊อกเด้งปลอดภัย ระบบเข้ารหัส SSL"
+              alt="ระบบความปลอดภัย SSL 256-bit เว็บป๊อกเด้ง POKSOD มาตรฐาน ISO 27001"
               className="rounded-xl gold-border-glow w-full"
               loading="lazy"
             />

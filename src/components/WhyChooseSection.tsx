@@ -1,5 +1,5 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-import whyChoose from "@/assets/why-choose.jpg";
+import whyChoose from "@/assets/pokdeng-auto-deposit-withdraw.jpg";
 import { Shield, Clock, Zap, Headphones } from "lucide-react";
 
 const features = [
@@ -42,7 +42,7 @@ const WhyChooseSection = () => {
           <div className="scroll-reveal hidden lg:block" style={{ transitionDelay: "200ms" }}>
             <img
               src={whyChoose}
-              alt="เว็บป๊อกเด้งออนไลน์ ฝากถอนออโต้ ปลอดภัย"
+              alt="ทำไมต้องเลือกเว็บป๊อกเด้ง POKSOD ฝากถอนออโต้ 3 วินาที ปลอดภัย 100%"
               className="rounded-xl gold-border-glow w-full"
               loading="lazy"
             />

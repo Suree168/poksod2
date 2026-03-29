@@ -1,11 +1,11 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-import pokerChips from "@/assets/poker-chips.jpg";
-import playingCards from "@/assets/playing-cards.jpg";
+import pokerChips from "@/assets/pokdeng-2-bai-chips.jpg";
+import playingCards from "@/assets/pokdeng-cards-online-game.jpg";
 
 const games = [
-  { img: pokerChips, title: "ป๊อกเด้ง 2 ใบ", desc: "เกมป๊อกเด้งออนไลน์ยอดฮิต เล่นง่าย ได้เงินจริง", alt: "เล่นป๊อกเด้ง 2 ใบ ได้เงินจริง" },
-  { img: playingCards, title: "ไพ่ป๊อกเด้งออนไลน์", desc: "เกมไพ่ได้เงินจริง ถ่ายทอดสดจากคาสิโน", alt: "เกมไพ่ป๊อกเด้งออนไลน์ได้เงินจริง" },
-  { img: pokerChips, title: "คาสิโนได้เงินจริง", desc: "รวมเกมคาสิโนออนไลน์ครบวงจร pokdeng online", alt: "คาสิโนออนไลน์ได้เงินจริง" },
+  { img: pokerChips, title: "ป๊อกเด้ง 2 ใบ", desc: "เกมป๊อกเด้งออนไลน์ยอดฮิต เล่นง่าย ได้เงินจริง", alt: "ป๊อกเด้ง 2 ใบ เกมไพ่ออนไลน์ยอดฮิต ได้เงินจริง" },
+  { img: playingCards, title: "ไพ่ป๊อกเด้งออนไลน์", desc: "เกมไพ่ได้เงินจริง ถ่ายทอดสดจากคาสิโน", alt: "ไพ่ป๊อกเด้งออนไลน์ ถ่ายทอดสดจากคาสิโนจริง" },
+  { img: pokerChips, title: "คาสิโนได้เงินจริง", desc: "รวมเกมคาสิโนออนไลน์ครบวงจร pokdeng online", alt: "คาสิโนออนไลน์ เกมป๊อกเด้งได้เงินจริง POKSOD" },
 ];
 
 const GameSection = () => {

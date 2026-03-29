@@ -1,5 +1,5 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-import goldCoins from "@/assets/gold-coins.jpg";
+import goldCoins from "@/assets/pokdeng-bonus-promotion-coins.jpg";
 
 const promos = [
   { title: "สมาชิกใหม่ โบนัส 100%", desc: "สมัครวันนี้รับโบนัสเพิ่มทันที 100% สูงสุด 5,000 บาท", tag: "🔥 ยอดนิยม" },
@@ -17,7 +17,7 @@ const PromotionSection = () => {
           <div className="scroll-reveal hidden lg:block">
             <img
               src={goldCoins}
-              alt="โปรโมชั่นเว็บป๊อกเด้ง โบนัสจัดเต็ม"
+              alt="โปรโมชั่นป๊อกเด้ง โบนัสสมาชิกใหม่ 100% สูงสุด 5000 บาท"
               className="rounded-xl gold-border-glow w-full"
               loading="lazy"
             />
