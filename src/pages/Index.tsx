@@ -38,35 +38,6 @@ const Index = () => {
       <main>
         <JsonLd data={[homeSchema, homeBreadcrumbSchema]} />
         <HeroSection />
-
-        <section className="section-dark py-12 md:py-16">
-          <div className="container max-w-5xl">
-            <h2 className="text-2xl md:text-3xl font-bold gold-text gold-glow mb-6">โครงสร้างเนื้อหาเว็บไซต์</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
-              <a href="/pokdeng-2-bai" className="card-casino p-4 hover:brightness-110 transition-all">
-                <h3 className="font-bold text-foreground mb-1">Pillar</h3>
-                <p className="text-xs text-muted-foreground">/pokdeng-2-bai</p>
-              </a>
-              <a href="/blog" className="card-casino p-4 hover:brightness-110 transition-all">
-                <h3 className="font-bold text-foreground mb-1">Content</h3>
-                <p className="text-xs text-muted-foreground">/blog</p>
-              </a>
-              <a href="/reviews" className="card-casino p-4 hover:brightness-110 transition-all">
-                <h3 className="font-bold text-foreground mb-1">Review</h3>
-                <p className="text-xs text-muted-foreground">/reviews</p>
-              </a>
-              <a href="/about" className="card-casino p-4 hover:brightness-110 transition-all">
-                <h3 className="font-bold text-foreground mb-1">Trust</h3>
-                <p className="text-xs text-muted-foreground">/about</p>
-              </a>
-              <a href="/promotions" className="card-casino p-4 hover:brightness-110 transition-all">
-                <h3 className="font-bold text-foreground mb-1">Promotion</h3>
-                <p className="text-xs text-muted-foreground">/promotions</p>
-              </a>
-            </div>
-          </div>
-        </section>
-
         <WhyChooseSection />
         <GameSection />
         <PromotionSection />
