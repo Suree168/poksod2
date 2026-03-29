@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 45 54% 80%;
+
+    --card: 0 100% 8%;
+    --card-foreground: 45 54% 80%;
+
+    --popover: 0 100% 8%;
+    --popover-foreground: 45 54% 80%;
+
+    --primary: 45 54% 52%;
+    --primary-foreground: 0 0% 5%;
+
+    --secondary: 0 100% 18%;
+    --secondary-foreground: 45 54% 80%;
+
+    --muted: 0 50% 12%;
+    --muted-foreground: 45 20% 55%;
+
+    --accent: 0 100% 27%;
+    --accent-foreground: 45 54% 80%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 45 40% 25%;
+    --input: 0 50% 15%;
+    --ring: 45 54% 52%;
+
+    --radius: 0.5rem;
+
+    --gold: 45 54% 52%;
+    --gold-light: 45 60% 65%;
+    --gold-dark: 45 50% 38%;
+    --crimson: 0 100% 27%;
+    --crimson-dark: 0 100% 18%;
+    --crimson-deeper: 0 100% 10%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Noto Sans Thai', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+    overflow-wrap: break-word;
+  }
+}
+
+@layer components {
+  .gold-text {
+    @apply text-primary;
+  }
+
+  .gold-glow {
+    text-shadow: 0 0 20px hsl(45 54% 52% / 0.5), 0 0 40px hsl(45 54% 52% / 0.3);
+  }
+
+  .btn-gold {
+    @apply bg-primary text-primary-foreground font-bold px-8 py-4 rounded-lg text-lg transition-all duration-300;
+    box-shadow: 0 0 20px hsl(45 54% 52% / 0.4), 0 4px 16px hsl(0 0% 0% / 0.3);
+  }
+
+  .btn-gold:hover {
+    box-shadow: 0 0 30px hsl(45 54% 52% / 0.6), 0 4px 24px hsl(0 0% 0% / 0.4);
+    transform: translateY(-2px);
+  }
+
+  .btn-gold:active {
+    transform: scale(0.97) translateY(0);
+  }
+
+  .card-casino {
+    @apply bg-card rounded-xl border border-border overflow-hidden;
+    box-shadow: 0 0 15px hsl(45 54% 52% / 0.1), 0 8px 32px hsl(0 0% 0% / 0.4);
+  }
+
+  .section-dark {
+    @apply bg-background;
+  }
+
+  .section-crimson {
+    background: linear-gradient(180deg, hsl(0 100% 8%) 0%, hsl(0 100% 12%) 50%, hsl(0 100% 8%) 100%);
+  }
+
+  .gold-border-glow {
+    border: 1px solid hsl(45 54% 52% / 0.4);
+    box-shadow: inset 0 0 20px hsl(45 54% 52% / 0.05), 0 0 15px hsl(45 54% 52% / 0.1);
+  }
+
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(4px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
