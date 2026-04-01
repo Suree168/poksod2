@@ -101,12 +101,24 @@ async function generatePost() {
 {"title":"...","slug":"...","summary":"...","keywords":["...","...."]}`;
 
   const genAI = new GoogleGenerativeAI(apiKey);
-  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+  const MODELS = ["gemini-1.5-flash", "gemini-2.0-flash"];
 
   console.log(`🔄 Generating post with keyword: "${keyword}"...`);
 
-  const result = await model.generateContent(prompt);
-  const text = result.response.text().trim();
+  let text;
+  for (const modelName of MODELS) {
+    try {
+      console.log(`   Trying model: ${modelName}`);
+      const model = genAI.getGenerativeModel({ model: modelName });
+      const result = await model.generateContent(prompt);
+      text = result.response.text().trim();
+      console.log(`   ✅ Success with ${modelName}`);
+      break;
+    } catch (err) {
+      console.log(`   ⚠️ ${modelName} failed: ${err.message.slice(0, 100)}`);
+      if (modelName === MODELS[MODELS.length - 1]) throw err;
+    }
+  }
 
   // parse JSON จาก response
   let parsed;
