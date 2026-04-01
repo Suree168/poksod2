@@ -101,7 +101,7 @@ async function generatePost() {
 {"title":"...","slug":"...","summary":"...","keywords":["...","...."]}`;
 
   const genAI = new GoogleGenerativeAI(apiKey);
-  const MODELS = ["gemini-1.5-flash", "gemini-2.0-flash"];
+  const MODELS = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-2.0-flash-lite"];
 
   console.log(`🔄 Generating post with keyword: "${keyword}"...`);
 
