@@ -74,23 +74,6 @@ const Blog = () => {
             ))}
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mt-10">
-            <article className="card-casino p-6">
-              <h2 className="text-xl font-bold text-foreground mb-2">Cluster Linking</h2>
-              <p className="text-sm text-muted-foreground">
-                ทุกบทความในคลัสเตอร์นี้จะส่งลิงก์กลับไปยังหน้า Pillar ที่
-                <a href="/pokdeng-2-bai" className="gold-text hover:underline"> /pokdeng-2-bai</a>
-                เพื่อเพิ่มความแข็งแรงด้าน SEO
-              </p>
-            </article>
-            <article className="card-casino p-6">
-              <h2 className="text-xl font-bold text-foreground mb-2">Next Step</h2>
-              <p className="text-sm text-muted-foreground">
-                เมื่อต้องการกระตุ้น conversion ให้ผู้ใช้งานไปยังหน้า
-                <a href="/promotions" className="gold-text hover:underline"> /promotions</a>
-              </p>
-            </article>
-          </div>
         </div>
       </main>
       <Footer />
