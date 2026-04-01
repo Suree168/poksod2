@@ -38,7 +38,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/data/posts.json
+          git add src/data/posts.json public/blog-images/
           git diff --staged --quiet && echo "No changes to commit" && exit 0
           git commit -m "content(blog): auto-post — ${{ steps.generate.outputs.title }}"
           git push

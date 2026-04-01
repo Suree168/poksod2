@@ -8,12 +8,13 @@
  */
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const POSTS_PATH = resolve(__dirname, "../src/data/posts.json");
+const IMAGES_DIR = resolve(__dirname, "../public/blog-images");
 const MAX_POSTS = 50;
 const SITE_URL = "https://www.poksod.com";
 
@@ -147,6 +148,15 @@ async function generatePost() {
     slug = `${slug}-${Date.now().toString(36)}`;
   }
 
+  // --- สร้างรูป featured image ---
+  let imagePath = "";
+  try {
+    imagePath = await generateImage(genAI, parsed.title, slug);
+    console.log(`\u{1f5bc}\ufe0f  Image saved: ${imagePath}`);
+  } catch (err) {
+    console.log(`\u26a0\ufe0f  Image generation skipped: ${err.message.slice(0, 100)}`);
+  }
+
   const today = new Date().toISOString().slice(0, 10);
   const newPost = {
     slug,
@@ -155,6 +165,7 @@ async function generatePost() {
     href,
     date: today,
     keywords: parsed.keywords || [],
+    image: imagePath || "",
   };
 
   // prepend (บทความใหม่อยู่บนสุด)
@@ -184,7 +195,54 @@ async function generatePost() {
   }
 }
 
+// --- Image generation function ---
+async function generateImage(genAI, title, slug) {
+  if (!existsSync(IMAGES_DIR)) {
+    mkdirSync(IMAGES_DIR, { recursive: true });
+  }
+
+  const IMAGE_MODELS = ["gemini-2.5-flash-image", "gemini-2.0-flash"];
+  const imagePrompt = `Create a beautiful, high-quality featured image for a Thai online Pok Deng (\u0e1b\u0e4a\u0e2d\u0e01\u0e40\u0e14\u0e49\u0e07) blog article titled: "${title}"
+
+Style requirements:
+- Casino/card game theme with luxury gold and dark tones
+- Professional, modern design suitable for a website hero image
+- Include visual elements like playing cards, poker chips, or casino table
+- Rich colors: deep red, gold, black background
+- NO text or letters in the image
+- Aspect ratio: 16:9 landscape
+- Photorealistic or high-quality digital art style`;
+
+  for (const modelName of IMAGE_MODELS) {
+    try {
+      console.log(`\u{1f3a8} Generating image with ${modelName}...`);
+      const model = genAI.getGenerativeModel({
+        model: modelName,
+        generationConfig: { responseModalities: ["TEXT", "IMAGE"] },
+      });
+
+      const result = await model.generateContent(imagePrompt);
+      const parts = result.response.candidates?.[0]?.content?.parts || [];
+
+      for (const part of parts) {
+        if (part.inlineData) {
+          const { mimeType, data } = part.inlineData;
+          const ext = mimeType === "image/png" ? "png" : mimeType === "image/webp" ? "webp" : "jpg";
+          const fileName = `${slug}.${ext}`;
+          const filePath = resolve(IMAGES_DIR, fileName);
+          writeFileSync(filePath, Buffer.from(data, "base64"));
+          return `/blog-images/${fileName}`;
+        }
+      }
+      console.log(`   \u26a0\ufe0f ${modelName}: no image in response`);
+    } catch (err) {
+      console.log(`   \u26a0\ufe0f ${modelName} image failed: ${err.message.slice(0, 100)}`);
+    }
+  }
+  return "";
+}
+
 generatePost().catch((err) => {
-  console.error("❌ Error:", err.message);
+  console.error("\u274c Error:", err.message);
   process.exit(1);
 });

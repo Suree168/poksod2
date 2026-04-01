@@ -51,13 +51,25 @@ const Blog = () => {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {posts.map((post) => (
-              <article key={post.slug} className="card-casino p-6 flex flex-col">
-                <h2 className="text-xl font-bold text-foreground mb-3">{post.title}</h2>
-                <p className="text-sm text-muted-foreground mb-4 flex-1">{post.summary}</p>
-                {post.date && (
-                  <time className="text-xs text-muted-foreground/60 mb-3" dateTime={post.date}>{post.date}</time>
+              <article key={post.slug} className="card-casino overflow-hidden flex flex-col">
+                {post.image && (
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
                 )}
-                <a href={post.href} className="btn-gold text-center">อ่านต่อ</a>
+                <div className="p-6 flex flex-col flex-1">
+                  <h2 className="text-xl font-bold text-foreground mb-3">{post.title}</h2>
+                  <p className="text-sm text-muted-foreground mb-4 flex-1">{post.summary}</p>
+                  {post.date && (
+                    <time className="text-xs text-muted-foreground/60 mb-3" dateTime={post.date}>{post.date}</time>
+                  )}
+                  <a href={post.href} className="btn-gold text-center">อ่านต่อ</a>
+                </div>
               </article>
             ))}
           </div>
