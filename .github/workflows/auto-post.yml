@@ -1,0 +1,60 @@
+name: Auto Post Blog + Social Media
+
+on:
+  # ตั้งเวลาอัตโนมัติ: ทุกวัน 03:00 UTC = 10:00 น. เวลาไทย
+  schedule:
+    - cron: "0 3 * * *"
+  # กดปุ่มสั่งเอง
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-and-post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate blog post with Gemini AI
+        id: generate
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/generate-post.mjs
+
+      - name: Commit and push new post
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/posts.json
+          git diff --staged --quiet && echo "No changes to commit" && exit 0
+          git commit -m "content(blog): auto-post — ${{ steps.generate.outputs.title }}"
+          git push
+
+      - name: Post to social media
+        if: steps.generate.outputs.title != ''
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
+        run: |
+          node scripts/post-social.mjs \
+            --title "${{ steps.generate.outputs.title }}" \
+            --summary "${{ steps.generate.outputs.summary }}" \
+            --url "${{ steps.generate.outputs.url }}"
