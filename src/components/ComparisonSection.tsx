@@ -15,7 +15,7 @@ const ComparisonSection = () => {
             <thead>
               <tr className="border-b border-border">
                 <th className="text-left py-4 px-4 text-muted-foreground font-semibold">คุณสมบัติ</th>
-                <th className="py-4 px-4 gold-text font-bold text-center">Poksod.com</th>
+                <th className="py-4 px-4 gold-text font-bold text-center">Poksod-th.com</th>
                 <th className="py-4 px-4 text-muted-foreground text-center">เว็บทั่วไป</th>
               </tr>
             </thead>

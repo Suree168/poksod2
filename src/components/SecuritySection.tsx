@@ -13,7 +13,7 @@ const SecuritySection = () => {
               เว็บป๊อกเด้งปลอดภัย มั่นใจได้ 100%
             </h2>
             <p className="scroll-reveal text-foreground/70 mb-6" style={{ transitionDelay: "80ms" }}>
-              Poksod.com ให้ความสำคัญกับความปลอดภัยของสมาชิกทุกท่าน ด้วยระบบรักษาความปลอดภัยระดับสากล เพื่อให้คุณเล่นป๊อกเด้งออนไลน์ได้อย่างอุ่นใจ
+              Poksod-th.com ให้ความสำคัญกับความปลอดภัยของสมาชิกทุกท่าน ด้วยระบบรักษาความปลอดภัยระดับสากล เพื่อให้คุณเล่นป๊อกเด้งออนไลน์ได้อย่างอุ่นใจ
             </p>
             <ul className="scroll-reveal space-y-3 text-foreground/80" style={{ transitionDelay: "160ms" }}>
               {[

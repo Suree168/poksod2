@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-border/50 pt-6 text-center text-xs text-muted-foreground">
-          © 2026 Poksod.com — เว็บป๊อกเด้งออนไลน์ได้เงินจริง | pokdeng online
+          © 2026 Poksod-th.com — เว็บป๊อกเด้งออนไลน์ได้เงินจริง | pokdeng online
         </div>
       </div>
     </footer>

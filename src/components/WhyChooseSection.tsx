@@ -21,7 +21,7 @@ const WhyChooseSection = () => {
               ทำไมต้องเลือกเว็บป๊อกเด้งของเรา?
             </h2>
             <p className="scroll-reveal text-foreground/70 mb-10" style={{ transitionDelay: "80ms" }}>
-              Poksod.com คือเว็บป๊อกเด้งออนไลน์ที่ผู้เล่นไว้วางใจมากที่สุด ด้วยระบบที่ทันสมัยและบริการระดับพรีเมียม
+              Poksod-th.com คือเว็บป๊อกเด้งออนไลน์ที่ผู้เล่นไว้วางใจมากที่สุด ด้วยระบบที่ทันสมัยและบริการระดับพรีเมียม
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6">

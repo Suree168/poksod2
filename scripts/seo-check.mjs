@@ -31,12 +31,12 @@ const routePages = [
 try {
   const sitemap = readUtf8("public/sitemap.xml");
   const expectedSitemapUrls = [
-    "https://www.poksod.com/",
-    "https://www.poksod.com/pokdeng-2-bai",
-    "https://www.poksod.com/promotions",
-    "https://www.poksod.com/blog",
-    "https://www.poksod.com/reviews",
-    "https://www.poksod.com/about",
+    "https://www.poksod-th.com/",
+    "https://www.poksod-th.com/pokdeng-2-bai",
+    "https://www.poksod-th.com/promotions",
+    "https://www.poksod-th.com/blog",
+    "https://www.poksod-th.com/reviews",
+    "https://www.poksod-th.com/about",
   ];
 
   addCheck(

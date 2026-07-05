@@ -23,7 +23,7 @@ URL:
 
 Expected:
 - `<title>` and meta description are page-specific (not stale)
-- Canonical: `https://www.poksod.com/`
+- Canonical: `https://www.poksod-th.com/`
 - JSON-LD includes:
   - `WebPage`
   - `BreadcrumbList`
@@ -39,7 +39,7 @@ URL:
 - `http://127.0.0.1:5173/pokdeng-2-bai`
 
 Expected:
-- Canonical: `https://www.poksod.com/pokdeng-2-bai`
+- Canonical: `https://www.poksod-th.com/pokdeng-2-bai`
 - JSON-LD includes:
   - `Article`
   - `WebPage`
@@ -51,7 +51,7 @@ URL:
 - `http://127.0.0.1:5173/promotions`
 
 Expected:
-- Canonical: `https://www.poksod.com/promotions`
+- Canonical: `https://www.poksod-th.com/promotions`
 - JSON-LD includes:
   - `FAQPage`
   - `WebPage`
@@ -63,7 +63,7 @@ URL:
 - `http://127.0.0.1:5173/blog`
 
 Expected:
-- Canonical: `https://www.poksod.com/blog`
+- Canonical: `https://www.poksod-th.com/blog`
 - JSON-LD includes:
   - `Blog`
   - `WebPage`
@@ -76,7 +76,7 @@ URL:
 - `http://127.0.0.1:5173/reviews`
 
 Expected:
-- Canonical: `https://www.poksod.com/reviews`
+- Canonical: `https://www.poksod-th.com/reviews`
 - JSON-LD includes:
   - `Review`
   - `WebPage`
@@ -88,7 +88,7 @@ URL:
 - `http://127.0.0.1:5173/about`
 
 Expected:
-- Canonical: `https://www.poksod.com/about`
+- Canonical: `https://www.poksod-th.com/about`
 - JSON-LD includes:
   - `AboutPage`
   - `WebPage`
@@ -100,12 +100,12 @@ File:
 - `public/sitemap.xml`
 
 Expected URLs present:
-- `https://www.poksod.com/`
-- `https://www.poksod.com/pokdeng-2-bai`
-- `https://www.poksod.com/promotions`
-- `https://www.poksod.com/blog`
-- `https://www.poksod.com/reviews`
-- `https://www.poksod.com/about`
+- `https://www.poksod-th.com/`
+- `https://www.poksod-th.com/pokdeng-2-bai`
+- `https://www.poksod-th.com/promotions`
+- `https://www.poksod-th.com/blog`
+- `https://www.poksod-th.com/reviews`
+- `https://www.poksod-th.com/about`
 
 ## Manual Spot Checks
 

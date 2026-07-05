@@ -1,4 +1,4 @@
-const SITE_URL = "https://www.poksod.com";
+const SITE_URL = "https://www.poksod-th.com";
 
 type BreadcrumbInput = {
   name: string;

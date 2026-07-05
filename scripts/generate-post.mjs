@@ -16,7 +16,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const POSTS_PATH = resolve(__dirname, "../src/data/posts.json");
 const IMAGES_DIR = resolve(__dirname, "../public/blog-images");
 const MAX_POSTS = 50;
-const SITE_URL = "https://www.poksod.com";
+const SITE_URL = "https://www.poksod-th.com";
 
 // --- keyword pool สำหรับสุ่มเลือกหัวข้อ ---
 const KEYWORD_POOL = [
@@ -89,7 +89,7 @@ async function generatePost() {
 
   // Gemini prompt
   const prompt = `คุณเป็นนักเขียน SEO ภาษาไทยผู้เชี่ยวชาญด้านเกมป๊อกเด้งออนไลน์
-สร้างบทความ 1 บทความสำหรับเว็บ POKSOD (poksod.com) โดยใช้ keyword หลัก: "${keyword}"
+สร้างบทความ 1 บทความสำหรับเว็บ POKSOD (poksod-th.com) โดยใช้ keyword หลัก: "${keyword}"
 
 กฎ:
 - ชื่อบทความ (title) ต้องเป็นภาษาไทย ดึงดูด มี keyword และไม่ซ้ำกับบทความเดิม: [${existingTitles}]

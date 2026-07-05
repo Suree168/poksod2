@@ -30,7 +30,7 @@ export const usePageSeo = ({ title, description, path }: SeoInput) => {
   useEffect(() => {
     document.title = title;
 
-    const canonicalUrl = `https://www.poksod.com${path}`;
+    const canonicalUrl = `https://www.poksod-th.com${path}`;
 
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
     if (!canonical) {
