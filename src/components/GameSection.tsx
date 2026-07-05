@@ -41,7 +41,7 @@ const GameSection = () => {
               <div className="p-6">
                 <h3 className="text-xl font-bold text-foreground mb-2">{g.title}</h3>
                 <p className="text-muted-foreground text-sm mb-4">{g.desc}</p>
-                <a href="https://line.me/R/ti/p/@521ubspd" target="_blank" rel="noopener noreferrer" className="btn-gold inline-block text-sm px-6 py-3">
+                <a href="https://lin.ee/q0LNZjp" target="_blank" rel="noopener noreferrer" className="btn-gold inline-block text-sm px-6 py-3">
                   เล่นเลย
                 </a>
               </div>

@@ -43,7 +43,7 @@ const PromotionSection = () => {
                     <h3 className="font-bold text-foreground mt-1">{p.title}</h3>
                     <p className="text-sm text-muted-foreground mt-1">{p.desc}</p>
                   </div>
-                  <a href="https://line.me/R/ti/p/@521ubspd" target="_blank" rel="noopener noreferrer" className="btn-gold text-sm px-4 py-2 shrink-0">
+                  <a href="https://lin.ee/q0LNZjp" target="_blank" rel="noopener noreferrer" className="btn-gold text-sm px-4 py-2 shrink-0">
                     รับโบนัส
                   </a>
                 </div>

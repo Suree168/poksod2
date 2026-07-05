@@ -12,7 +12,7 @@ const Navbar = () => {
           <a href="/reviews" className="hover:text-primary transition-colors">รีวิว</a>
           <a href="/about" className="hover:text-primary transition-colors">เกี่ยวกับเรา</a>
         </div>
-        <a href="https://line.me/R/ti/p/@521ubspd" target="_blank" rel="noopener noreferrer" className="btn-gold text-sm px-5 py-2.5">สมัคร</a>
+        <a href="https://lin.ee/q0LNZjp" target="_blank" rel="noopener noreferrer" className="btn-gold text-sm px-5 py-2.5">สมัคร</a>
       </div>
     </nav>
   );

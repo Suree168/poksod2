@@ -34,7 +34,7 @@ const HeroSection = () => {
 
           <div className="scroll-reveal flex flex-wrap gap-4 pt-4" style={{ transitionDelay: "240ms" }}>
             <a
-              href="https://line.me/R/ti/p/@521ubspd"
+              href="https://lin.ee/q0LNZjp"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold animate-pulse-glow text-center"
@@ -42,7 +42,7 @@ const HeroSection = () => {
               สมัครสมาชิก
             </a>
             <a
-              href="https://lin.ee/8mo8SO2"
+              href="https://lin.ee/q0LNZjp"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-lg font-bold text-lg border border-border text-foreground hover:bg-muted transition-all duration-300 active:scale-[0.97] text-center"

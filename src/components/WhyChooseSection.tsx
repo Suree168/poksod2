@@ -50,7 +50,7 @@ const WhyChooseSection = () => {
         </div>
 
         <div className="text-center mt-12 scroll-reveal" style={{ transitionDelay: "100ms" }}>
-          <a href="https://line.me/R/ti/p/@521ubspd" target="_blank" rel="noopener noreferrer" className="btn-gold">สมัครเล่นป๊อกเด้งออนไลน์</a>
+          <a href="https://lin.ee/q0LNZjp" target="_blank" rel="noopener noreferrer" className="btn-gold">สมัครเล่นป๊อกเด้งออนไลน์</a>
         </div>
       </div>
     </section>

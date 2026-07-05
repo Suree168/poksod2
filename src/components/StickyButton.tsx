@@ -2,7 +2,7 @@ const StickyButton = () => {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
       <a
-        href="https://line.me/R/ti/p/@521ubspd"
+        href="https://lin.ee/q0LNZjp"
         target="_blank"
         rel="noopener noreferrer"
         className="btn-gold animate-pulse-glow text-center rounded-full px-6 py-3 text-sm shadow-2xl"
@@ -10,7 +10,7 @@ const StickyButton = () => {
         สมัครเลย
       </a>
       <a
-        href="https://lin.ee/8mo8SO2"
+        href="https://lin.ee/q0LNZjp"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="เพิ่มเพื่อน LINE"

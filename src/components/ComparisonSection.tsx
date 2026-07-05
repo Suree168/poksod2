@@ -39,7 +39,7 @@ const ComparisonSection = () => {
         </div>
 
         <div className="text-center mt-10 scroll-reveal" style={{ transitionDelay: "200ms" }}>
-          <a href="https://line.me/R/ti/p/@521ubspd" target="_blank" rel="noopener noreferrer" className="btn-gold">เลือก Poksod วันนี้</a>
+          <a href="https://lin.ee/q0LNZjp" target="_blank" rel="noopener noreferrer" className="btn-gold">เลือก Poksod วันนี้</a>
         </div>
       </div>
     </section>

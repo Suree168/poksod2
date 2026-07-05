@@ -22,7 +22,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="/promotions" className="hover:text-primary transition-colors">โปรโมชั่น</a></li>
               <li><a href="/about" className="hover:text-primary transition-colors">เกี่ยวกับเรา</a></li>
-              <li><a href="https://lin.ee/8mo8SO2" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">ติดต่อเรา</a></li>
+              <li><a href="https://lin.ee/q0LNZjp" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">ติดต่อเรา</a></li>
             </ul>
           </div>
           <div>
