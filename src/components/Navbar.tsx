@@ -8,6 +8,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-6 text-sm text-foreground/70">
           <a href="/pokdeng-2-bai" className="hover:text-primary transition-colors">ป๊อกเด้ง 2 ใบ</a>
           <a href="/promotions" className="hover:text-primary transition-colors">โปรโมชั่น</a>
+          <a href="/#rules" className="hover:text-primary transition-colors">กติกา</a>
           <a href="/blog" className="hover:text-primary transition-colors">บทความ</a>
           <a href="/reviews" className="hover:text-primary transition-colors">รีวิว</a>
           <a href="/about" className="hover:text-primary transition-colors">เกี่ยวกับเรา</a>
